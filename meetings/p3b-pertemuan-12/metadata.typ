@@ -1,0 +1,17 @@
+#let metadata = (
+  report-title: "Laporan Praktikum",
+  course: "Praktikum Pemrograman Perangkat bergerak dasar",
+  meeting: "Pertemuan 12",
+  topic: "CRUD NOTESAPP",
+  student: "Muhammad Naufal Fitriarto",
+  student-id: "25/567748/SV/27252",
+  class: "PL3B2 TRPL 2026",
+  lecturer: "Dr. Irkham Huda, S.Kom., M.Cs. ",
+  program: "Program Studi D-IV Teknologi Rekayasa Perangkat Lunak",
+  department: "Departemen Teknik Elektro dan Informatika",
+  faculty: "Sekolah Vokasi",
+  university: "Universitas Gadjah Mada",
+  city: "Yogyakarta",
+  year: "2026",
+  logo: image("assets/logo-ugm.png", width: 5.5cm),
+)

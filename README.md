@@ -44,6 +44,34 @@ Untuk mengedit laporan pertemuan 01:
 
 Folder `output/` akan dibuat terlebih dahulu jika belum tersedia.
 
+### Menonaktifkan Daftar Isi atau Daftar Gambar untuk Satu Laporan
+
+Template menyediakan opsi `show-toc` dan `show-figures` pada `make-report`. Keduanya bernilai `true` secara default, sehingga laporan lain tetap menampilkan daftar seperti biasa.
+
+Untuk menonaktifkan Daftar Isi dan Daftar Gambar hanya pada satu laporan, ubah pemanggilan `make-report` di bagian atas file `report.typ` tersebut:
+
+```typ
+#show: doc => make-report(
+  metadata,
+  doc,
+  show-toc: false,
+  show-figures: false,
+)
+```
+
+Untuk menonaktifkan salah satu saja, atur opsi yang diperlukan ke `false` dan biarkan opsi lainnya tetap `true`:
+
+```typ
+#show: doc => make-report(
+  metadata,
+  doc,
+  show-toc: false,
+  show-figures: true,
+)
+```
+
+Opsi ini hanya berlaku pada laporan yang pemanggilan `make-report`-nya diubah. Penomoran halaman dan isi laporan tetap digunakan.
+
 ## 4. Quick Guide Membuat Pertemuan Baru
 
 Setiap pertemuan baru dibuat dari scaffold yang berada di `template/meeting-template/`. Jangan menyalin folder pertemuan lama beserta isinya.
@@ -299,7 +327,7 @@ Catatan Typst: nilai `leading` adalah jarak tambahan antarbaris, bukan otomatis 
 
 1. Buka `meetings/pertemuan-01/report.typ`.
 2. Jalankan preview Tinymist.
-3. Periksa perubahan pada halaman cover, daftar isi, daftar gambar, isi, dan daftar pustaka.
+3. Periksa perubahan pada halaman cover, daftar isi dan daftar gambar jika diaktifkan, isi, serta daftar pustaka.
 
 ### Kompilasi satu laporan
 
@@ -317,6 +345,7 @@ Periksa hal berikut pada PDF akhir:
 - Nomor cover tidak ditampilkan.
 - Halaman pendahuluan memakai nomor Romawi kecil.
 - Halaman isi memakai nomor Arab.
+- Daftar isi dan daftar gambar tampil sesuai opsi pada `make-report`.
 - Heading utama dan subheading bernomor otomatis.
 - Tidak ada teks mentah, placeholder, atau petunjuk mengisi laporan.
 - Gambar dapat dibaca dan tidak terpotong.

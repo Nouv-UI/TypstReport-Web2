@@ -106,7 +106,7 @@
   ]
 }
 
-#let make-report(meta, body) = {
+#let make-report(meta, body, show-toc: true, show-figures: true) = {
   set page(
     paper: report-config.paper,
     margin: report-config.margin,
@@ -130,23 +130,31 @@
   set page(numbering: "i")
   counter(page).update(1)
 
-  outline(
-    title: align(center)[
-      #text(size: 12pt, weight: "bold")[DAFTAR ISI]
-    ],
-    indent: 1.5em,
-  )
+  if show-toc {
+    outline(
+      title: align(center)[
+        #text(size: 12pt, weight: "bold")[DAFTAR ISI]
+      ],
+      indent: 1.5em,
+    )
+  }
 
-  pagebreak()
+  if show-toc and show-figures {
+    pagebreak()
+  }
 
-  outline(
-    title: align(center)[
-      #text(size: 12pt, weight: "bold")[DAFTAR GAMBAR]
-    ],
-    target: figure,
-  )
+  if show-figures {
+    outline(
+      title: align(center)[
+        #text(size: 12pt, weight: "bold")[DAFTAR GAMBAR]
+      ],
+      target: figure,
+    )
+    pagebreak()
+  } else if show-toc {
+    pagebreak()
+  }
 
-  pagebreak()
   set page(numbering: "1")
   counter(page).update(1)
 

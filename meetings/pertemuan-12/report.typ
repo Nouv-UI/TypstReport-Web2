@@ -5,9 +5,9 @@
 
 = Tujuan Praktikum
 
-#isi(level: 1)[
-  Tuliskan tujuan praktikum berdasarkan modul dan instruksi dosen.
-]
+== Mampu Memahami Cara Kerja 
+== Mampu Mengoptimasi Hasil Searching Menggunakan SEO (Search Engine Optimization)
+== 
 
 = Dasar Teori
 
