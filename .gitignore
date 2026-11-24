@@ -1,0 +1,15 @@
+# Generated PDFs and build output
+/output/
+/build/
+
+# Typst temporary and auxiliary files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.tmp
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/*.code-workspace

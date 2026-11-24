@@ -1,0 +1,17 @@
+#let metadata = (
+  report-title: "Laporan Praktikum",
+  course: "Nama Mata Kuliah",
+  meeting: "Pertemuan 00",
+  topic: "Topik Praktikum",
+  student: "Nama Mahasiswa",
+  student-id: "NIM",
+  class: "Kelas",
+  lecturer: "Nama Dosen",
+  program: "Program Studi",
+  department: "Departemen",
+  faculty: "Fakultas",
+  university: "Universitas",
+  city: "Yogyakarta",
+  year: "2026",
+  logo: none,
+)
