@@ -75,7 +75,7 @@ Setiap pertemuan baru dibuat dari scaffold yang berada di `template/meeting-temp
    typst compile --root . meetings\pertemuan-02\report.typ output\pertemuan-02.pdf
    ```
 
-Jika metadata logo memakai `none`, template menampilkan kotak placeholder. Untuk memasang logo:
+Scaffold sudah menyertakan logo UGM dan metadata menunjuk ke file tersebut. Jika menggunakan logo lain, salin file logo ke folder `assets/` pada pertemuan baru, lalu ubah nilai `logo`:
 
 ```typ
 logo: image("assets/logo-ugm.png", width: 5.5cm),
